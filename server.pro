@@ -1,7 +1,12 @@
 QT += core gui network widgets
 TARGET = Server
+CONFIG += c++11
 TEMPLATE = app
 SOURCES += main.cpp \
-           serverwindow.cpp
-HEADERS += serverwindow.h
-FORMS += serverwindow.ui
+           business/serverlogic.cpp \
+           ui/serverwindow.cpp
+HEADERS += \
+    business/serverlogic.h \
+    ui/serverwindow.h
+FORMS += \
+    ui/serverwindow.ui
